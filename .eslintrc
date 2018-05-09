@@ -5,5 +5,47 @@
         "es6": true // enables es6 features
     },
     "parser": "babel-eslint", // needed to make babel stuff work properly
-    "extends": "airbnb"
+    "extends": "airbnb",
+    "rules": {
+    "no-console": [
+      "error",
+      {
+        "allow": [
+          "warn",
+          "error",
+          "info"
+        ]
+      }
+    ],
+    "import/extensions": [
+      "off"
+    ],
+    "import/prefer-default-export": [
+      "off"
+    ],
+    "jsx-a11y/media-has-caption": [
+      "off"
+    ],
+    "no-underscore-dangle": [
+      "off"
+    ],
+    "no-param-reassign": [
+      "off"
+    ],
+    "import/no-unresolved": [
+      "off"
+    ],
+    "react/prop-types": [
+      "off"
+    ],
+    "react/no-unescaped-entities": [
+      "off"
+    ],
+    "jsx-a11y/no-static-element-interactions": [
+      "off"
+    ],
+    "jsx-a11y/click-events-have-key-events": [
+      "off"
+    ]
+  }
 }
