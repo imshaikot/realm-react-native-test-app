@@ -9,7 +9,6 @@ export const Product = {
     images: 'Image[]',
     price: 'Price',
     category: 'Category',
-    audit: 'Audit',
     deleted: 'bool',
   },
 };

@@ -35,26 +35,23 @@ const styles = {
   },
 };
 
-export default (props) => {
-  // props.data.forEach(each => console.log(each.audit));
-  return (
-    <View>
-      {props.data.map(product => (
-        <ListItemContainer key={product.id}>
-          <Thumb images={product.images} />
-          <View style={styles.textContainer1}>
-            <Text style={styles.productNameText}>{product.name}</Text>
-            <Text style={styles.commonText}>{product.category.name}</Text>
-            <Text style={styles.commonText}>{product.supplier.name}</Text>
-            <Text style={styles.commonText}>User Name</Text>
-          </View>
-          <View style={styles.textContainer2}>
-            <Text style={styles.priceText}>
-              {product.price.currency} {product.price.value}
-            </Text>
-          </View>
-        </ListItemContainer>
-      ))}
-    </View>
-  );
-};
+export default ({ data }) => (
+  <View>
+    {data.map(product => (
+      <ListItemContainer key={product.id}>
+        <Thumb images={product.images} />
+        <View style={styles.textContainer1}>
+          <Text style={styles.productNameText}>{product.name}</Text>
+          <Text style={styles.commonText}>{product.category.name}</Text>
+          <Text style={styles.commonText}>{product.supplier.name}</Text>
+          <Text style={styles.commonText}>User Name</Text>
+        </View>
+        <View style={styles.textContainer2}>
+          <Text style={styles.priceText}>
+            {product.price.currency} {product.price.value}
+          </Text>
+        </View>
+      </ListItemContainer>
+    ))}
+  </View>
+);

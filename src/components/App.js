@@ -35,6 +35,12 @@ export default class App extends Component {
       .catch(error => console.error('error', error));
   }
 
+  componentWillUnmount() {
+    if (this.state.products.removeListener) {
+      this.state.products.removeListener(this.updateChanges);
+    }
+  }
+
 
   updateChanges = pipeline => this.setState({ products: pipeline });
 
