@@ -14,27 +14,30 @@ import ProductList from './ProductList';
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: '#F5FCFF',
+    marginTop: 30,
+    marginBottom: 30,
   },
 });
 
 export default class App extends Component {
-  state = {
-    products: [],
-  };
-
-  componentDidMount() {
+  constructor(props) {
+    super(props);
+    this.state = {
+      products: [],
+    };
     database.then((realm) => {
       const products = realm.objects('Product').filtered('deleted = false');
       this.setState({
         products,
-      });
+      }, () => products.addListener(this.updateChanges));
     })
       .catch(error => console.error('error', error));
   }
+
+
+  updateChanges = pipeline => this.setState({ products: pipeline });
+
   render() {
     return (
       <ScrollView bounces contentContainerStyle={styles.container}>
