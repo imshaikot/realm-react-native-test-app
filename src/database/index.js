@@ -15,6 +15,6 @@ export default new Promise((resolve, reject) => Realm
         user,
         url: `realm://${serverUrl}${dbPath}`,
       },
-      schema: [Product, Supplier, Category, Image, Price], // Object.getOwnPropertyNames(Schemas).filter(each => each !== 'default').map(each => Schemas[each]),
+      schema: [Product, Supplier, Category, Image, Price],
     }));
   }).catch(reject));
