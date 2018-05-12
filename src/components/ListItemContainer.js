@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { View } from 'react-native';
+import { View, TouchableOpacity } from 'react-native';
 
 const styles = {
   containerStyle: {
@@ -31,9 +31,9 @@ const ListItemContainer = (props) => {
   const { containerStyle, vBorder } = styles;
   return (
     <Fragment>
-      <View style={containerStyle}>
+      <TouchableOpacity style={containerStyle}>
         {props.children}
-      </View>
+      </TouchableOpacity>
       <View style={vBorder} />
     </Fragment>
   );
