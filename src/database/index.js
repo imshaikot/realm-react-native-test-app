@@ -5,7 +5,7 @@ import {
   serverUrl,
   dbPath,
 } from './user';
-import { Product, Supplier, Category, Image, Price } from './schema';
+import { Product, Supplier, Category, Image, Price, Audit, User } from './schema';
 
 export default new Promise((resolve, reject) => Realm
   .Sync.User.login(`http://${serverUrl}`, authUser, authPassword)
@@ -15,6 +15,6 @@ export default new Promise((resolve, reject) => Realm
         user,
         url: `realm://${serverUrl}${dbPath}`,
       },
-      schema: [Product, Supplier, Category, Image, Price],
+      schema: [Product, Supplier, Category, Image, Price, Audit, User],
     }));
   }).catch(reject));

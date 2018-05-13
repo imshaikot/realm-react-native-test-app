@@ -9,6 +9,7 @@ export const Product = {
     images: 'Image[]',
     price: 'Price',
     category: 'Category',
+    audit: 'Audit',
     deleted: 'bool',
   },
 };
@@ -54,25 +55,21 @@ export const Category = {
 };
 
 
-// export const User = {
-//   name: 'User',
-//   primaryKey: 'id',
-//   properties: {
-//     id: 'string',
-//     firstName: 'string',
-//     lastName: 'string',
-//     phoneNumber: 'string?',
-//     companyName: 'string?',
-//     email: 'string',
-//     preferredLanguage: 'string?',
-//   },
-// };
+export const User = {
+  name: 'User',
+  primaryKey: 'id',
+  properties: {
+    id: 'string',
+    firstName: 'string',
+    lastName: 'string',
+  },
+};
 
-// export const Audit = {
-//   name: 'Audit',
-//   primaryKey: 'id',
-//   properties: {
-//     id: 'string',
-//     createdBy: 'User',
-//   },
-// };
+export const Audit = {
+  name: 'Audit',
+  primaryKey: 'id',
+  properties: {
+    id: 'string',
+    createdBy: 'User',
+  },
+};
