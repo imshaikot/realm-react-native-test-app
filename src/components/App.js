@@ -10,7 +10,7 @@ import {
   ScrollView,
 } from 'react-native';
 import database from '../database';
-import ProductList from './ProductList';
+import { ProductList } from './ProductList';
 
 const styles = StyleSheet.create({
   container: {

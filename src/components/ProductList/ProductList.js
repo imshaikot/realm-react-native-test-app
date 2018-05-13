@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import ListItemContainer from './ListItemContainer';
-import Thumb from './Thumb';
+import { ListItemContainer, Thumb } from './childs';
 
 const styles = {
   thumb: {
@@ -44,7 +43,11 @@ export default ({ data }) => (
           <Text style={styles.productNameText}>{product.name}</Text>
           <Text style={styles.commonText}>{product.category.name}</Text>
           <Text style={styles.commonText}>{product.supplier.name}</Text>
-          <Text style={styles.commonText}>User Name</Text>
+          <Text style={styles.commonText}>
+            { product.audit && product.audit.createdBy ? (
+              `${product.audit.createdBy.firstName} ${product.audit.createdBy.lastName}`
+              ) : 'No User' }
+          </Text>
         </View>
         <View style={styles.textContainer2}>
           <Text style={styles.priceText}>
