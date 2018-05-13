@@ -1,6 +1,6 @@
 <h1 align="center">ShowSourcing Test App</h1>
 
-<p align="center"> `React` used for UI component, `react-native` for mobile UI and compiling,  `eslint` for code linting and standardization, `realm` database for data exchanges</p>
+`React` used for UI component, `react-native` for mobile UI and compiling,  `eslint` for code linting and standardization, `realm` database for data exchanges
 
 ## Installation
 (this documentation assumes that the subsequent development environment has all necessary common dependencies are installed and configured, such as node.js, yarn, xcode, Android SDK)
