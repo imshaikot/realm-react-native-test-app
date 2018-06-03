@@ -1,4 +1,4 @@
-<h1 align="center">ShowSourcing Test App</h1>
+<h1 align="center">Realm Test App</h1>
 
 `React` used for UI component, `react-native` for mobile UI and compiling,  `eslint` for code linting and standardization, `realm` database for data exchanges
 
